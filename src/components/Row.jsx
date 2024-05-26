@@ -8,6 +8,7 @@ import axios from 'axios'
 const Row = ({title , fetchURL}) => {
 
     const [movies , setMovies] = useState([])
+    const [like , setLike] = useState(false)
 
     useEffect(() => {
         axios.get(fetchURL).then((response)=>{
